@@ -64,11 +64,12 @@ function renderButtons() {
   }
 };
 
-// New button created when field has a value entered
+// New button created when field has a value entered and then cleared after confirming
 $(".add-gif").on("click", function(event){
     event.preventDefault();
     var gifs = $(".gif-name").val().trim();
     pokemon.push(gifs);
+    $(".gif-name").val("");
     renderButtons();
 });
 
